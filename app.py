@@ -4,6 +4,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+
+
 with open('model.pkl', 'rb') as file:
     model = pickle.load(file)
 
@@ -17,12 +19,12 @@ with col2:
     no2_aqi = st.number_input("NO2 AQI Value:", min_value=0, placeholder='Enter NO2 AQI Value')
     pm_aqi = st.number_input("PM2.5 AQI Value:", min_value=0, placeholder='Enter PM2.5 AQI Value')
 
-check = 1
-
 if st.button("Predict"):
     data = pd.DataFrame([[co_aqi, ozone_aqi, no2_aqi, pm_aqi]], columns=["CO AQI Value","Ozone AQI Value","NO2 AQI Value","PM2.5 AQI Value"])
+    start_time = time.time()
     pred = model.predict(data)
-    check = 0
+    end_time = time.time()
+    elapsed = end_time - start_time
     with col1:
         st.write('**Air Quality Index** ')
         st.write(int(pred[0]))
@@ -44,9 +46,10 @@ if st.button("Predict"):
     with col2:
         st.write("**Air Quality Index Category** ")
         st.write(aqi_category)
+    st.write(f'Elapsed time : {elapsed :.5f} seconds')
 
 
-description = """
+    description = """
     About the Air Quality Index (AQI)
     The Air Quality Index (AQI) is a standardized system used to measure and report the quality of air in a specific area. It provides an easy-to-understand scale that indicates how polluted the air is and what the associated health effects might be for the general public. The AQI ranges from 0 to 500, with higher values indicating greater air pollution and higher potential health risks.
 
@@ -60,13 +63,13 @@ description = """
     The AQI considers key pollutants such as PM2.5, PM10, carbon monoxide (CO), ozone (O₃), nitrogen dioxide (NO₂), and sulfur dioxide (SO₂). This information helps individuals make informed decisions to protect their health, such as limiting outdoor activities during poor air quality days.
 
     For more information, refer to your local environmental agency or the World Health Organization (WHO) guidelines on air quality.
-"""
-if check:
+    """
+
     def stream_data():
         for word in description.split(" "):
             yield word + " "
             time.sleep(0.005)
-
+    
     st.write_stream(stream_data)
-else:
+
     st.write(description)
