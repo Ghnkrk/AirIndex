@@ -4,6 +4,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+check = 1
+
 with open('model.pkl', 'rb') as file:
     model = pickle.load(file)
 
@@ -17,7 +19,7 @@ with col2:
     no2_aqi = st.number_input("NO2 AQI Value:", min_value=0, placeholder='Enter NO2 AQI Value')
     pm_aqi = st.number_input("PM2.5 AQI Value:", min_value=0, placeholder='Enter PM2.5 AQI Value')
 
-check = 1
+
 col3, col4 = st.columns(2)
 if st.button("Predict"):
     data = pd.DataFrame([[co_aqi, ozone_aqi, no2_aqi, pm_aqi]], columns=["CO AQI Value","Ozone AQI Value","NO2 AQI Value","PM2.5 AQI Value"])
