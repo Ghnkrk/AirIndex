@@ -10,7 +10,6 @@ with open('model.pkl', 'rb') as file:
     model = pickle.load(file)
 
 st.title('Air Quality Index Prediction')
-
 col1 , col2 = st.columns(2)
 with col1:
     co_aqi = st.number_input("CO AQI Value:", min_value=0, placeholder='Enter CO AQI Value')
@@ -19,6 +18,8 @@ with col2:
     no2_aqi = st.number_input("NO2 AQI Value:", min_value=0, placeholder='Enter NO2 AQI Value')
     pm_aqi = st.number_input("PM2.5 AQI Value:", min_value=0, placeholder='Enter PM2.5 AQI Value')
 
+
+col3, col4 = st.columns(2)
 if st.button("Predict"):
     data = pd.DataFrame([[co_aqi, ozone_aqi, no2_aqi, pm_aqi]], columns=["CO AQI Value","Ozone AQI Value","NO2 AQI Value","PM2.5 AQI Value"])
     start_time = time.time()
@@ -43,7 +44,7 @@ if st.button("Predict"):
             case _ if 301 <= pred:
                 aqi_category = 'Hazardous'
 
-    with col2:
+    with col4:
         st.write("**Air Quality Index Category** ")
         st.write(aqi_category)
     st.write(f'Elapsed time : {elapsed :.5f} seconds')
@@ -72,4 +73,3 @@ if st.button("Predict"):
     
     st.write_stream(stream_data)
 
-    st.write(description)
