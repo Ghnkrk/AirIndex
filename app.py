@@ -10,25 +10,21 @@ with open('model.pkl', 'rb') as file:
     model = pickle.load(file)
 
 st.title('Air Quality Index Prediction')
-check = 0
+check = 1
 col1 , col2 = st.columns(2)
 with col1:
     co_aqi = st.number_input("CO AQI Value:", min_value=0, placeholder='Enter CO AQI Value')
-    check +=1
     ozone_aqi = st.number_input("OZONE AQI Value:", min_value=0, placeholder='Enter OZONE AQI Value')
-    check +=1
 with col2:
     no2_aqi = st.number_input("NO2 AQI Value:", min_value=0, placeholder='Enter NO2 AQI Value')
-    check +=1
     pm_aqi = st.number_input("PM2.5 AQI Value:", min_value=0, placeholder='Enter PM2.5 AQI Value')
-    check +=1
 
 
 col3, col4 = st.columns(2)
 if st.button("Predict"):
     data = pd.DataFrame([[co_aqi, ozone_aqi, no2_aqi, pm_aqi]], columns=["CO AQI Value","Ozone AQI Value","NO2 AQI Value","PM2.5 AQI Value"])
     pred = model.predict(data)
-    check +=1
+    check = 0
     with col3:
         st.write('**Air Quality Index** ')
         st.write(int(pred[0]))
@@ -67,7 +63,7 @@ description = """
 
     For more information, refer to your local environmental agency or the World Health Organization (WHO) guidelines on air quality.
 """
-if check == 0:
+if check:
     def stream_data():
         for word in description.split(" "):
             yield word + " "
