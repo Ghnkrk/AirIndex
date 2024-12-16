@@ -4,13 +4,13 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-check = 0
+
 
 with open('model.pkl', 'rb') as file:
     model = pickle.load(file)
 
 st.title('Air Quality Index Prediction')
-
+check = 0
 col1 , col2 = st.columns(2)
 with col1:
     co_aqi = st.number_input("CO AQI Value:", min_value=0, placeholder='Enter CO AQI Value')
