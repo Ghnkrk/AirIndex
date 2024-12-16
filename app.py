@@ -18,12 +18,12 @@ with col2:
     pm_aqi = st.number_input("PM2.5 AQI Value:", min_value=0, placeholder='Enter PM2.5 AQI Value')
 
 check = 1
-
+col3, col4 = st.columns(2)
 if st.button("Predict"):
     data = pd.DataFrame([[co_aqi, ozone_aqi, no2_aqi, pm_aqi]], columns=["CO AQI Value","Ozone AQI Value","NO2 AQI Value","PM2.5 AQI Value"])
     pred = model.predict(data)
     check = 0
-    with col1:
+    with col3:
         st.write('**Air Quality Index** ')
         st.write(int(pred[0]))
         aqi_category = 0
@@ -41,7 +41,7 @@ if st.button("Predict"):
             case _ if 301 <= pred:
                 aqi_category = 'Hazardous'
 
-    with col2:
+    with col4:
         st.write("**Air Quality Index Category** ")
         st.write(aqi_category)
 
