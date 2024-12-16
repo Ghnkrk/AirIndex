@@ -4,7 +4,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-check = 1
+check = 0
 
 with open('model.pkl', 'rb') as file:
     model = pickle.load(file)
