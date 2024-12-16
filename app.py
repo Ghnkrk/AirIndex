@@ -26,7 +26,7 @@ if st.button("Predict"):
     pred = model.predict(data)
     end_time = time.time()
     elapsed = end_time - start_time
-    with col1:
+    with col3:
         st.write('**Air Quality Index** ')
         st.write(int(pred[0]))
         aqi_category = 0
