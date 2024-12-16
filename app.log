@@ -1,0 +1,44 @@
+2024-12-16 20:19:37,967 - INFO - Loading the model from .pkl format
+2024-12-16 20:19:37,967 - INFO - Loading the model from .pkl format
+2024-12-16 20:19:37,967 - INFO - Loading the model from .pkl format
+2024-12-16 20:19:42,217 - INFO - Loading the model from .pkl format
+2024-12-16 20:19:42,235 - INFO - Predicting with model
+2024-12-16 20:19:42,245 - INFO - Inference completed
+2024-12-16 20:19:42,245 - INFO - AQI value displayed
+2024-12-16 20:19:42,245 - INFO - AQI Category determined
+2024-12-16 20:19:42,245 - INFO - AQI Category displayed
+2024-12-16 20:19:44,088 - INFO - Description displayed
+2024-12-16 20:19:58,811 - INFO - Loading the model from .pkl format
+2024-12-16 20:20:00,586 - INFO - Loading the model from .pkl format
+2024-12-16 20:20:00,603 - INFO - Predicting with model
+2024-12-16 20:20:00,603 - INFO - Inference completed
+2024-12-16 20:20:00,603 - INFO - AQI value displayed
+2024-12-16 20:20:00,603 - INFO - AQI Category determined
+2024-12-16 20:20:00,603 - INFO - AQI Category displayed
+2024-12-16 20:20:02,426 - INFO - Description displayed
+2024-12-16 20:20:05,687 - INFO - Loading the model from .pkl format
+2024-12-16 20:20:07,837 - INFO - Loading the model from .pkl format
+2024-12-16 20:20:07,953 - INFO - Loading the model from .pkl format
+2024-12-16 20:20:07,986 - INFO - Predicting with model
+2024-12-16 20:20:07,993 - INFO - Inference completed
+2024-12-16 20:20:07,996 - INFO - AQI value displayed
+2024-12-16 20:20:07,997 - INFO - AQI Category determined
+2024-12-16 20:20:07,999 - INFO - AQI Category displayed
+2024-12-16 20:20:09,852 - INFO - Description displayed
+2024-12-16 20:20:15,058 - INFO - Loading the model from .pkl format
+2024-12-16 20:20:15,172 - INFO - Loading the model from .pkl format
+2024-12-16 20:20:15,202 - INFO - Predicting with model
+2024-12-16 20:20:15,214 - INFO - Inference completed
+2024-12-16 20:20:15,216 - INFO - AQI value displayed
+2024-12-16 20:20:15,217 - INFO - AQI Category determined
+2024-12-16 20:20:15,219 - INFO - AQI Category displayed
+2024-12-16 20:20:17,091 - INFO - Description displayed
+2024-12-16 20:20:28,319 - INFO - Loading the model from .pkl format
+2024-12-16 20:20:29,468 - INFO - Loading the model from .pkl format
+2024-12-16 20:20:29,478 - INFO - Predicting with model
+2024-12-16 20:20:29,487 - INFO - Inference completed
+2024-12-16 20:20:29,489 - INFO - AQI value displayed
+2024-12-16 20:20:29,489 - INFO - AQI Category determined
+2024-12-16 20:20:29,492 - INFO - AQI Category displayed
+2024-12-16 20:20:31,278 - INFO - Description displayed
+2024-12-16 20:25:35,721 - INFO - Loading the model from .pkl format
