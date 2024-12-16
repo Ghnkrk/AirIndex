@@ -47,7 +47,7 @@ if st.button("Predict"):
         st.write('**Air Quality Index** ')
         st.write(int(pred[0]))
         logging.info("AQI value displayed")
-        aqi_category = 0
+        aqi_category = ''
         match pred:
             case _ if 0 <= pred <=50:
                 aqi_category = 'Good'
