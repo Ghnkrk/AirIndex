@@ -65,7 +65,7 @@ if check:
     def stream_data():
         for word in description.split(" "):
             yield word + " "
-            time.sleep(0.005)
+            time.sleep(0.01)
 
     st.write_stream(stream_data)
 else:
