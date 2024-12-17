@@ -72,19 +72,19 @@ if st.button("Predict"):
 
 
     description = """
-    About the Air Quality Index (AQI)
+    **About the Air Quality Index (AQI)**
     The Air Quality Index (AQI) is a standardized system used to measure and report the quality of air in a specific area. 
     It provides an easy-to-understand scale that indicates how polluted the air is and what the associated health effects might be for the general public.
     The AQI ranges from 0 to 500, with higher values indicating greater air pollution and higher potential health risks.
 
-    AQI Categories: \n 
-    0-50 (Good): Air quality is considered satisfactory, and air pollution poses little or no risk. \n 
-    51-100 (Moderate): Air quality is acceptable; however, some pollutants may be a concern for sensitive individuals. \n 
-    101-150 (Unhealthy for Sensitive Groups): Members of sensitive groups, such as children, elderly, 
+    **AQI Categories:** \n 
+    **0-50 (Good):** Air quality is considered satisfactory, and air pollution poses little or no risk. \n 
+    **51-100 (Moderate):** Air quality is acceptable; however, some pollutants may be a concern for sensitive individuals. \n 
+    **101-150 (Unhealthy for Sensitive Groups):** Members of sensitive groups, such as children, elderly, 
     and individuals with respiratory or heart conditions, may experience health effects. \n 
-    151-200 (Unhealthy): Everyone may begin to experience health effects; members of sensitive groups may experience more serious effects. \n 
-    201-300 (Very Unhealthy): Health alert: Everyone may experience more serious health effects. \n 
-    301-500 (Hazardous): Health warnings of emergency conditions. The entire population is likely to be affected. \n 
+    **151-200 (Unhealthy):** Everyone may begin to experience health effects; members of sensitive groups may experience more serious effects. \n 
+    **201-300 (Very Unhealthy):** Health alert: Everyone may experience more serious health effects. \n 
+    **301-500 (Hazardous):** Health warnings of emergency conditions. The entire population is likely to be affected. \n 
     The AQI considers key pollutants such as PM2.5, PM10, carbon monoxide (CO), ozone (O₃),nitrogen dioxide (NO₂), and sulfur dioxide (SO₂).
     This information helps individuals make informed decisions to protect their health, such as limiting outdoor activities during poor air quality days.
 
