@@ -191,7 +191,7 @@ def prediction_page():
 
     elif choice == "Logout":
         st.session_state.logged_in = False
-        st.experimental_rerun()
+        st.rerun()
 
 # Main App Logic
 def main():
