@@ -68,7 +68,7 @@ streamlit run app.py
 
 2️⃣ **Model Training**  
    - **RandomSearchCV** is used to determine the best estimator and its best hyperparameters among **Linear Regression , Support Vector Regression and XGBRegressor**.  
-   - The best estimator is saved as `model.pkl` using Pickle.  
+   - The best estimator **XGBRegressor** is saved as `model.pkl` using Pickle.  
 
 3️⃣ **Deployment**  
    - Streamlit provides an intuitive user interface for data input and results.  
@@ -85,8 +85,8 @@ python model.py
 
 The script:  
 - Loads and preprocesses the dataset.  
-- Trains the best estimator.  
-- Exports the trained model to `model.pkl`.  
+- Trains the best estimator **XGBRegressor**.  
+- Exports the trained model to `model.pkl`.
 
 ---
 
@@ -121,5 +121,3 @@ This project is licensed under the **MIT License**. See the `LICENSE` file for d
 Unleash the power of machine learning to create a cleaner, healthier environment. 🌱  
 
 ---
-
-Let me know if you want additional customizations! 😊
