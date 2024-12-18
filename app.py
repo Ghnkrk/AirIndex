@@ -151,15 +151,9 @@ def prediction_page():
             
             aqi_category, color = get_aqi_category(pred[0])
             
-            with col3:
-                st.write('**Air Quality Index**')
-                st.markdown(f'<h2 style="color:{color};">{int(pred[0])}</h2>', unsafe_allow_html=True)
-                logging.info("AQI value displayed")
-            
-            with col4:
-                st.write("**Air Quality Category**")
-                st.markdown(f'<h2 style="color:{color};">{aqi_category}</h2>', unsafe_allow_html=True)
-                logging.info("AQI Category displayed")
+            st.write("**Air Quality Category**")
+            st.markdown(f'<h2 style="color:{color};">{aqi_category}</h2>', unsafe_allow_html=True)
+            logging.info("AQI Category displayed")
             
             st.write(f'Elapsed Prediction Time: {elapsed:.7f} seconds')
 
